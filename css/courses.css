@@ -1,0 +1,229 @@
+* {
+    color: #ff2033;
+    font-family: "Inria Sans";
+}
+body {
+    background: #a8a8a8;
+}
+header {
+    width: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    box-shadow: 0px 0px 15px 2px grey;
+    padding: 5px;
+}
+.nav-tit {
+    position: absolute;
+    font-family: "Irish Grover";
+    left: 0;
+    font-size: 40px;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.search {
+    display: flex;
+    height: 40px;
+    width: 30%;
+    border-radius: 50px;
+    background: white;
+    position: relative;
+    margin: 10px;
+}
+.logo {
+    height: 38px;
+    width: 38px;
+    margin-top: 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    background: white;
+    margin-left: 2px;
+}
+.logo i {
+    align-self: center;
+}
+.search input {
+    right: 0;
+    width: 60%;
+    height: 100%;
+    align-self: center;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 50px;
+    background: #D9D9D9;
+    font-size: 22px;
+}
+.search input:focus {
+    transition: 1s;
+    width: 100%;
+}
+.cont {
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(4,23%);
+    gap: 20px 20px;
+    justify-content: center;
+}
+.card {
+    float: left;
+    margin: 0;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 0px 10px 5px grey;
+    text-decoration: none;
+}
+.card:hover {
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 0px transparent;
+}
+.card > * {
+    padding: 10px;
+}
+.card img {
+    height: 60%;
+    width: 100%;
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+.card h2 {
+    width: 100%;
+    margin: 0;
+    font-size: 20px;
+    padding: 5px;
+    height: 10%;
+}
+.foot-card {
+    display: flex;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+    position: relative;
+    padding: 0;
+}
+.card:hover .foot-card::after {
+    transition: 1s;
+    width: 100%;
+    content: 'Get It Now';
+
+}
+.foot-card::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right bottom,rgb(204, 0, 255),rgba(255, 0, 43, 0.9));
+    width: 0%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+}
+.foot-card i {
+    color: rgb(240, 204, 0);
+} 
+.aut {
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tags {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+.tag {
+    background: #ff2033;
+    border-radius: 3px;
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: white;
+}
+@media screen and (max-width: 700px) {
+    body {
+        background: white;
+    }
+    .cont {
+        display: block;
+        width: 100%;
+    }
+    .card {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10px;
+        height: 38%;
+        position: relative;
+        box-shadow: 0px 0px 0px 0px transparent;
+        border: 1px solid black;
+    }
+    .tags {
+        height: 0%;
+        display: none;
+    }
+    .foot-card {
+        height: 25%;
+        position: unset;
+    }
+    .rates {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 10px;
+    }
+    .foot-card::after {
+        content: "";
+        display: none;
+    }
+    .aut {
+        width: 100%;
+        text-align: right;
+        margin-right: 10%;
+        height: 5%;
+    }
+    header {
+        justify-content: end;
+    }
+    .search {
+        width: 10%;
+        margin-right: 10%;
+    }
+    .search input {
+        width: 100%;
+    }
+    .search:hover {
+        transition: 1s;
+        width: 100%;
+    }
+    .g {
+        width: 100%;
+        height: 10%;
+    }
+}
